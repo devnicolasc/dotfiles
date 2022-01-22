@@ -38,4 +38,4 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 chsh -s $(which zsh) $(whoami)
 # fi
 
-echo 'All Done! run zsh command to enter the shell'
+echo 'Well Done! now run ```zsh``` command to enter the shell'
