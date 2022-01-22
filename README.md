@@ -27,14 +27,10 @@ if [ -d "$DOTFILES_DIR" ]; then
     rm -rf "$DOTFILES_DIR"
 fi
 ```
-4) clone dotfiles repository
+4) Create local repository using git bare and name it 'dotfiles'.
 ```
 DOTFILES_DIR=$HOME/dotfiles
-GITHUB_USER=nicolas-cho
-git clone --bare https://github.com/"$GITHUB_USER"/dotfiles.git $DOTFILES_DIR
-```
-5) Download dotfiles repo via HTTPS
-```
+GITHUB_USER=devnicolasc
 git clone --bare https://github.com/"$GITHUB_USER"/dotfiles.git $DOTFILES_DIR
 ```
 6) add configurations (config is an alias directly to the configurations folder ('dotfiles' in this case)
