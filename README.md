@@ -2,16 +2,10 @@
 
 Dotfiles are a collection of configuration files that are used to setup easily user preferred configurations.
 
-## create Dotfiles from scratch:
-1) create repository on github
-2) add dot files (.zshrc, .p10k.zsh)
-3) commit and push
-
-## dotfiles installed with shell script
-
-INSTALL
+## dotfiles deployment with shell script
+run the following command and you ready to go.
 ```
-GITHUB_USER=nicolas-cho
+GITHUB_USER=devnicolasc
 if (( $EUID == 0 ))
   then apt update && apt install -y curl git zsh wget tmux && curl -sSL https://raw.githubusercontent.com/"$GITHUB_USER"/dotfiles/main/dotfiles-install.sh | sh; 
   else sudo apt update && sudo apt install -y curl git zsh wget tmux && curl -sSL https://raw.githubusercontent.com/"$GITHUB_USER"/dotfiles/main/dotfiles-install.sh | sh;
@@ -51,7 +45,7 @@ echo "alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'" >
 ```
 7) [install dependencies](#install-dependencies)
 
-#tests:
+### tests:
 1) check if 'config' alias configured correctly
 ```
 > config status
@@ -61,7 +55,7 @@ nothing to commit, working directory clean
 ```
 cat ~/.zshrc
 ```
-# install dependencies 
+### install dependencies 
 1) Download and install OH-MY-ZSH with --unattended and --keep-zshrc flags.
 ```
 wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O ohmyzsh-setup.sh
